@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".sigc11.Datos">
+
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_cached_black_24dp"
+        android:title=""
+        android:showAsAction="always">
+
+    </item>
+
+</menu>

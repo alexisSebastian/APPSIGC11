@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">SIGC11APP</string>
+
+    <!--Strings Titulos-->
+    <string name="titleBienvenido">Bienvenido</string>
+    <string name="txtTitleEmpresa">Selecciona la empresa</string>
+
+    <!--Strings Cajas de texto-->
+    <string name="edtUserLogin">Usuario:</string>
+    <string name="edtPassLogin">Contraseña:</string>
+    <string name="edtRegNewUser">Usuario:</string>
+    <string name="edtRegNumCont">Número de control:</string>
+    <string name="edtRegContra">Contraseña:</string>
+
+
+
+    <!--Strings Botones-->
+    <string name="btnLogin">Iniciar Sesión</string>
+    <string name="btnSignUp">Registrarse</string>
+    <string name="btnEstadistica">Estadística</string>
+    <string name="btnMapa">Mapa</string>
+    <string name="btnRegistrar">Registrar</string>
+    <string name="btnCancelar">Cancelar</string>
+    <string name="btnConsultar">Consultar</string>
+    <!--Mensajes de error-->
+
+    <!--Seleccion-->
+    
+    <!--Texto tablas-->
+    <string name="rowEmpresa">Empresa</string>
+    <string name="rowSolicitud">Número de solicitud NIS</string>
+</resources>
