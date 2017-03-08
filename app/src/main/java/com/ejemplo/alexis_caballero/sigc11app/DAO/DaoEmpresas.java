@@ -57,8 +57,7 @@ public class DaoEmpresas {
 
         Cursor myCursor = ad.query(
                 DataBase.TABLE_1,
-                new String[]{
-                        "id","nombre"},
+                new String[]{"id","nombre"},
                         null,
                         null,
                         null,

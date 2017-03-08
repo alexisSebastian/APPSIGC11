@@ -24,7 +24,9 @@ import de.keyboardsurfer.android.widget.crouton.Style;
 public class Registro extends AppCompatActivity {
     EditText edtRnumCont, edtRUser, edtRContra;
     Button btnReg, btnCan;
-    private String ip = "192.168.43.116";
+
+
+    private String ip = "192.168.0.20";
 
 
     private final String URL_SERVICE = "http://"+ip+"/sigc11appws/servidor.php#";
