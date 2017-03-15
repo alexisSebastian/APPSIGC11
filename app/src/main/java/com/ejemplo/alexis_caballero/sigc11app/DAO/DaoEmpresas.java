@@ -74,27 +74,4 @@ public class DaoEmpresas {
         ad.close();
         return lstEmpresas;
     }
-
-    //actualizar las empresas
-
-    public  boolean upDateEmpresa (ItemEmpresas empresas){
-        ad = db.getWritableDatabase();
-
-        //variable del resultado
-        boolean result = false;
-
-        ContentValues cv = new ContentValues();
-
-        cv.put("nombre", empresas.getNombre());
-
-        try {
-            result = ad.update(DataBase.TABLE_1,cv,"id_empresa="+empresas.getId(),null)>0;
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-        ad.close();
-
-        return result;
-    }
 }

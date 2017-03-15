@@ -1,7 +1,7 @@
 package com.ejemplo.alexis_caballero.sigc11app.sigc11;
 
 import android.app.ProgressDialog;
-import android.content.ClipData;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -38,7 +38,7 @@ public class Concesionarios extends AppCompatActivity {
     public DaoEmpresas myDaoEmp;
 
     //conexion base de datos
-    private String ip = "10.169.6.189";
+    private String ip = "192.168.42.49";
     private final String URL_SERVICE = "http://"+ip+"/sigc11appws/servidor.php#";
     private final String NAMESPACE = "http://"+ip+"/sigc11appws/";
     private String METHOD_NAME = "";
@@ -74,6 +74,7 @@ public class Concesionarios extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
         menu.add(0,0,0, "Actualizar");
+        menu.add(0,1,1, "Ver Solicitudes");
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -82,6 +83,10 @@ public class Concesionarios extends AppCompatActivity {
         switch (item.getItemId()){
             case 0:
                 new EmpresaEnSegundoPlano().execute("");
+                break;
+            case 1:
+                Intent i = new Intent(Concesionarios.this, Solicitudes.class);
+                startActivity(i);
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -157,9 +162,9 @@ public class Concesionarios extends AppCompatActivity {
 
 
             DaoEmpresas myDao = new DaoEmpresas(getApplicationContext());
-            ItemEmpresas myEmpresa = new ItemEmpresas();
+            //ItemEmpresas myEmpresa = new ItemEmpresas();
 
-            myEmpresa.setNombre(itemEmpresases.get(0).getNombre());
+            //myEmpresa.setNombre(itemEmpresases.get(0).getNombre());
 
             for (ItemEmpresas empresas : itemEmpresases) {
                 if (myDao.insertEmpresa(empresas) == true){
@@ -171,17 +176,17 @@ public class Concesionarios extends AppCompatActivity {
             }
 
 
-            /*DaoEmpresas myDao = new DaoEmpresas(getApplicationContext());
-            for (int i = 0; i < itemEmpresases.size(); i++){
+            //DaoEmpresas myDao = new DaoEmpresas(getApplicationContext());
+            /*for (int i = 0; i < itemEmpresases.size(); i++){
                 ItemEmpresas myEmp = new ItemEmpresas();
                 myEmp.setNombre(itemEmpresases.get(i).getNombre());
                 if (itemEmpresases.size() >= i){
                     if (myDao.insertEmpresa(myEmp) == true){
-                        //Crouton.makeText(Concesionarios.this, "Actualizado", Style.INFO).show();
+                        Crouton.makeText(Concesionarios.this, "Actualizado", Style.INFO).show();
                         reload();
                     }
                 }else {
-                    //Crouton.makeText(Concesionarios.this, "Sin Novedades", Style.INFO).show();
+                    Crouton.makeText(Concesionarios.this, "Sin Novedades", Style.INFO).show();
                 }
             }*/
         }

@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
 
     SharedPreferences MyDatosLogin;
 
-    private String ip = "10.169.6.189";
+    private String ip = "192.168.42.49";
     private final String URL_SERVICE = "http://"+ip+"/sigc11appws/servidor.php#";
     private final String NAMESPACE = "http://"+ip+"/sigc11appws/";
     private String METHOD_NAME = "";

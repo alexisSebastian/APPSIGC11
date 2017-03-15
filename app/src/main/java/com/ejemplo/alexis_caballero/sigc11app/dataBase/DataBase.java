@@ -13,6 +13,7 @@ public class DataBase extends SQLiteOpenHelper {
     public static final String DB_NAME = "DbConcecionarios";
     public static final int DB_VERSION = 2;
     public static final String TABLE_1 = "EMPRESAS";
+    public static final String TABLE_2 = "solicitudes";
 
 
     //Script de las tablas
@@ -21,6 +22,15 @@ public class DataBase extends SQLiteOpenHelper {
             "(" +
             "id integer primary key autoincrement, " +
             "nombre varchar(40) not null " +
+            "); ";
+
+    public static final String SCRIPT_TABLE_2 = " " +
+            "create table "+TABLE_2+" " +
+            "(" +
+            "id integer primary key autoincrement, " +
+            "concesionario varchar(75), " +
+            "cable_instalar varchar(120), " +
+            "Tipo_Red varchar(45) not null " +
             "); ";
 
     public DataBase(Context ctx){
@@ -37,6 +47,7 @@ public class DataBase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(SCRIPT_TABLE_1);
+        db.execSQL(SCRIPT_TABLE_2);
     }
 
     @Override
