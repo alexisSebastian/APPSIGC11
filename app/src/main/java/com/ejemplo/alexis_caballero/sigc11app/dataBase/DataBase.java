@@ -28,9 +28,9 @@ public class DataBase extends SQLiteOpenHelper {
             "create table "+TABLE_2+" " +
             "(" +
             "id integer primary key autoincrement, " +
-            "concesionario varchar(75), " +
-            "cable_instalar varchar(120), " +
-            "Tipo_Red varchar(45) not null " +
+            "concesionario varchar(75) NULL DEFAULT 'sin datos', " +
+            "cable_instalar varchar(120) NULL DEFAULT 'sin dato', " +
+            "Tipo_Red varchar(45) NOT NULL " +
             "); ";
 
     public DataBase(Context ctx){

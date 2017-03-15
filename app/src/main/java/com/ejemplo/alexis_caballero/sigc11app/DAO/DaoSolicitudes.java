@@ -24,6 +24,9 @@ public class DaoSolicitudes {
         DB = new DataBase(cnt);
     }
 
+
+
+
     //realzar CRUD
     //Consultar todos los registros de la base de datos
     public boolean insertSolicitud(ItemSolicitud itemSolicitud){
@@ -46,17 +49,23 @@ public class DaoSolicitudes {
     }
 
     public ArrayList<ItemSolicitud> getAllSolicitudes(){
-        ArrayList<ItemSolicitud> lstSlicitud = new ArrayList<ItemSolicitud>();
 
+        ArrayList<ItemSolicitud> lstSlicitud = new ArrayList<ItemSolicitud>();
         AD = DB.getWritableDatabase();
 
-        Cursor myCursor = AD.query(DataBase.TABLE_2, new String[]{
-                        "id","concesionario","cable_instalar","Tipo_Red"},
-                null,null,null,null,null);
+        Cursor myCursor = AD.query(
+                DataBase.TABLE_2,
+                new String[]{"id","concesionario","cable_instalar","Tipo_Red"},
+                null,
+                null,
+                null,
+                null,
+                null
+        );
         if (myCursor.moveToFirst()){
             do {
                 lstSlicitud.add(new ItemSolicitud(myCursor.getInt(0),
-                        myCursor.getString(1)));
+                        myCursor.getString(1), myCursor.getString(2), myCursor.getString(3)));
             }while (myCursor.moveToNext());
         }
 

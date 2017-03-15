@@ -64,6 +64,9 @@ public class Solicitudes extends AppCompatActivity {
         myItemSolicitud = new ArrayList<ItemSolicitud>();
 
         myDaoSolicitud = new DaoSolicitudes(getApplication());
+        myItemSolicitud = myDaoSolicitud.getAllSolicitudes();
+
+        myAdapterSolicitud = new AdapterSolicitud(this, myItemSolicitud);
         lstSolicitud.setAdapter(myAdapterSolicitud);
         registerForContextMenu(lstSolicitud);
     }

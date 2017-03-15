@@ -10,6 +10,14 @@ public class ItemSolicitud implements Serializable {
     int id;
     String concesionario, cable_instalar, Tipo_Red;
 
+    public ItemSolicitud(String concesionario) {
+        this.concesionario = concesionario;
+    }
+
+    public ItemSolicitud() {
+
+    }
+
     public ItemSolicitud(int id) {
         this.id = id;
     }

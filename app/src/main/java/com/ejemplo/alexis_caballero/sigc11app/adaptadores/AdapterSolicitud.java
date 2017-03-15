@@ -52,7 +52,9 @@ public class AdapterSolicitud extends BaseAdapter {
         }
 
         ItemSolicitud myItemSolicitudes = itemSolicitudes.get(i);
-        TextView txtCon, txtCable, txtTipo;
+        TextView txtCon;
+        TextView txtCable;
+        TextView txtTipo;
 
         txtCon = (TextView)v.findViewById(R.id.txtCon);
         txtCable = (TextView)v.findViewById(R.id.txtCable);
