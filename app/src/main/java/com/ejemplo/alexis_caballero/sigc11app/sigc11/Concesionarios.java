@@ -168,7 +168,9 @@ public class Concesionarios extends AppCompatActivity {
 
             for (ItemEmpresas empresas : itemEmpresases) {
                 if (myDao.insertEmpresa(empresas) == true){
-                    Crouton.makeText(Concesionarios.this, "Actualizado", Style.INFO).show();
+                    //Crouton.makeText(Concesionarios.this, "Actualizado", Style.INFO).show();
+                    //probar aquí una validación para que no se vuelva a repetir el ciclo y
+                    //re-inserte la informacion que ya esta
                     reload();
                 }else{
                     Crouton.makeText(Concesionarios.this, "Sin Novedades", Style.INFO).show();

@@ -158,7 +158,7 @@ public class Solicitudes extends AppCompatActivity {
 
             for (ItemSolicitud solicitud : itemSolicituds) {
                 if (myDao.insertSolicitud(solicitud) == true){
-                    Crouton.makeText(Solicitudes.this, "Actualizado", Style.INFO).show();
+                    //Crouton.makeText(Solicitudes.this, "Actualizado", Style.INFO).show();
                     reload();
                 }else {
                     Crouton.makeText(Solicitudes.this, "Sin Novedades", Style.INFO).show();

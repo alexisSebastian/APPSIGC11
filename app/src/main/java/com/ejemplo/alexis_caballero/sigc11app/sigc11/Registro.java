@@ -26,9 +26,7 @@ public class Registro extends AppCompatActivity {
     Button btnReg, btnCan;
 
 
-    private String ip = "192.168.0.20";
-
-
+    private String ip = "192.168.42.49";
     private final String URL_SERVICE = "http://"+ip+"/sigc11appws/servidor.php#";
     private final String NAMESPACE = "http://"+ip+"/sigc11appws/";
     private String METHOD_NAME = "";
@@ -113,7 +111,6 @@ public class Registro extends AppCompatActivity {
     }
 
     class backgroun extends AsyncTask<String, Integer, Integer>{
-
         @Override
         protected Integer doInBackground(String... strings) {
             return newtUser(strings[0],strings[1],strings[2]);
@@ -122,7 +119,7 @@ public class Registro extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            dialogAsynk = ProgressDialog.show(Registro.this, "", "Procesando", true);
+            dialogAsynk = ProgressDialog.show(Registro.this, "", "Procesando...", true);
         }
 
         @Override
