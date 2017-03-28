@@ -33,7 +33,8 @@
             android:theme="@style/AppThemeST" />
         <activity
             android:name=".sigc11.Menu"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:label="Menú"/>
         <activity
             android:name=".sigc11.Registro"
             android:theme="@style/AppThemeST" />
@@ -56,10 +57,12 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".sigc11.Concesionarios"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:label="Concesionarios"/>
         <activity
             android:name=".sigc11.Solicitudes"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme"
+            android:label="Solicitudes"/>
     </application>
 
 </manifest>
