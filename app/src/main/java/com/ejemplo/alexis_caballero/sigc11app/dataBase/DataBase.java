@@ -29,7 +29,8 @@ public class DataBase extends SQLiteOpenHelper {
             "(" +
             "id integer primary key autoincrement, " +
             "concesionario varchar(75) NULL DEFAULT 'sin datos', " +
-            "cable_instalar varchar(120) NULL DEFAULT 'sin dato', " +
+            "Solicitud_NIS varchar(45) NOT NULL, " +
+            "cable_instalar varchar(120) NULL DEFAULT 'sin datos', " +
             "Tipo_Red varchar(45) NOT NULL " +
             "); ";
 

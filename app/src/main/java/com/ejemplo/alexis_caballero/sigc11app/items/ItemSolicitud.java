@@ -8,18 +8,9 @@ import java.io.Serializable;
 
 public class ItemSolicitud implements Serializable {
     int id;
-    String concesionario, cable_instalar, Tipo_Red;
-
-    public ItemSolicitud(String concesionario) {
-        this.concesionario = concesionario;
-    }
+    String concesionario, Solicitud_NIS, cable_instalar, Tipo_Red;
 
     public ItemSolicitud() {
-
-    }
-
-    public ItemSolicitud(int id) {
-        this.id = id;
     }
 
     public ItemSolicitud(int id, String concesionario) {
@@ -27,21 +18,30 @@ public class ItemSolicitud implements Serializable {
         this.concesionario = concesionario;
     }
 
-    public ItemSolicitud(int id, String concesionario, String cable_instalar) {
+    public ItemSolicitud(int id, String concesionario, String solicitud_NIS) {
         this.id = id;
         this.concesionario = concesionario;
+        Solicitud_NIS = solicitud_NIS;
+    }
+
+    public ItemSolicitud(int id, String concesionario, String solicitud_NIS, String cable_instalar) {
+        this.id = id;
+        this.concesionario = concesionario;
+        Solicitud_NIS = solicitud_NIS;
         this.cable_instalar = cable_instalar;
     }
 
-    public ItemSolicitud(int id, String concesionario, String cable_instalar, String tipo_Red) {
+    public ItemSolicitud(int id, String concesionario, String solicitud_NIS, String cable_instalar, String tipo_Red) {
         this.id = id;
         this.concesionario = concesionario;
+        Solicitud_NIS = solicitud_NIS;
         this.cable_instalar = cable_instalar;
         Tipo_Red = tipo_Red;
     }
 
-    public ItemSolicitud(String concesionario, String cable_instalar, String tipo_Red) {
+    public ItemSolicitud(String concesionario, String solicitud_NIS, String cable_instalar, String tipo_Red) {
         this.concesionario = concesionario;
+        Solicitud_NIS = solicitud_NIS;
         this.cable_instalar = cable_instalar;
         Tipo_Red = tipo_Red;
     }
@@ -60,6 +60,14 @@ public class ItemSolicitud implements Serializable {
 
     public void setConcesionario(String concesionario) {
         this.concesionario = concesionario;
+    }
+
+    public String getSolicitud_NIS() {
+        return Solicitud_NIS;
+    }
+
+    public void setSolicitud_NIS(String solicitud_NIS) {
+        Solicitud_NIS = solicitud_NIS;
     }
 
     public String getCable_instalar() {

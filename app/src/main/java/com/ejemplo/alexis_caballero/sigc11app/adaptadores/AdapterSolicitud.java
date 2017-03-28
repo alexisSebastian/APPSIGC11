@@ -53,16 +53,20 @@ public class AdapterSolicitud extends BaseAdapter {
 
         ItemSolicitud myItemSolicitudes = itemSolicitudes.get(i);
         TextView txtCon;
+        TextView txtSolic;
         TextView txtCable;
         TextView txtTipo;
 
+
         txtCon = (TextView)v.findViewById(R.id.txtCon);
+        txtSolic = (TextView)v.findViewById(R.id.txtSolic);
         txtCable = (TextView)v.findViewById(R.id.txtCable);
         txtTipo = (TextView)v.findViewById(R.id.txtTipo);
-
         txtCon.setText("Concesionario: " + myItemSolicitudes.getConcesionario());
+        txtSolic.setText("Solicitud_NIS: " + myItemSolicitudes.getSolicitud_NIS());
         txtCable.setText("Cable a instalar: " + myItemSolicitudes.getCable_instalar());
         txtTipo.setText("Tipo de red: " + myItemSolicitudes.getTipo_Red());
+
         return v;
     }
 }

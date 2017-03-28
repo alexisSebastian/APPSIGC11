@@ -35,6 +35,7 @@ public class DaoSolicitudes {
 
         ContentValues CV = new ContentValues();
         CV.put("concesionario", itemSolicitud.getConcesionario());
+        CV.put("Solicitud_NIS", itemSolicitud.getSolicitud_NIS());
         CV.put("cable_instalar", itemSolicitud.getCable_instalar());
         CV.put("Tipo_Red", itemSolicitud.getTipo_Red());
 
@@ -55,7 +56,7 @@ public class DaoSolicitudes {
 
         Cursor myCursor = AD.query(
                 DataBase.TABLE_2,
-                new String[]{"id","concesionario","cable_instalar","Tipo_Red"},
+                new String[]{"id","concesionario","Solicitud_NIS","cable_instalar","Tipo_Red"},
                 null,
                 null,
                 null,
@@ -64,8 +65,7 @@ public class DaoSolicitudes {
         );
         if (myCursor.moveToFirst()){
             do {
-                lstSlicitud.add(new ItemSolicitud(myCursor.getInt(0),
-                        myCursor.getString(1), myCursor.getString(2), myCursor.getString(3)));
+                lstSlicitud.add(new ItemSolicitud(myCursor.getInt(0),myCursor.getString(1),myCursor.getString(2),myCursor.getString(3),myCursor.getString(4)));
             }while (myCursor.moveToNext());
         }
 

@@ -26,7 +26,7 @@ public class Registro extends AppCompatActivity {
     Button btnReg, btnCan;
 
 
-    private String ip = "192.168.42.49";
+    private String ip = "192.168.0.4";
     private final String URL_SERVICE = "http://"+ip+"/sigc11appws/servidor.php#";
     private final String NAMESPACE = "http://"+ip+"/sigc11appws/";
     private String METHOD_NAME = "";
