@@ -75,6 +75,7 @@ public class Concesionarios extends AppCompatActivity {
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
         menu.add(0,0,0, "Actualizar");
         menu.add(0,1,1, "Ver Solicitudes");
+        menu.add(0,2,2, "Total de solicitudes");
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -87,6 +88,9 @@ public class Concesionarios extends AppCompatActivity {
             case 1:
                 Intent i = new Intent(Concesionarios.this, Solicitudes.class);
                 startActivity(i);
+                break;
+            case 2:
+                    //Link hacia el activity
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -176,7 +180,6 @@ public class Concesionarios extends AppCompatActivity {
                     Crouton.makeText(Concesionarios.this, "Sin Novedades", Style.INFO).show();
                 }
             }
-
 
             //DaoEmpresas myDao = new DaoEmpresas(getApplicationContext());
             /*for (int i = 0; i < itemEmpresases.size(); i++){
