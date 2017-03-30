@@ -22,7 +22,7 @@
         <activity
             android:name=".sigc11.SplashScreen"
             android:theme="@style/AppThemeST">
-             <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -33,8 +33,8 @@
             android:theme="@style/AppThemeST" />
         <activity
             android:name=".sigc11.Menu"
-            android:theme="@style/AppTheme"
-            android:label="Menú"/>
+            android:label="Menú"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".sigc11.Registro"
             android:theme="@style/AppThemeST" />
@@ -56,12 +56,17 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".sigc11.Concesionarios"
-            android:theme="@style/AppTheme"
-            android:label="Concesionarios"/>
+            android:label="Concesionarios"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".sigc11.Solicitudes"
-            android:theme="@style/AppTheme"
-            android:label="Solicitudes"/>
+            android:label="Solicitudes"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".sigc11.Empresas"
+            android:label="Total de solicitudes por empresa"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".sigc11.Graficos"></activity>
     </application>
 
 </manifest>

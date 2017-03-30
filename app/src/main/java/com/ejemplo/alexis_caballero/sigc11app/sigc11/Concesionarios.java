@@ -86,11 +86,12 @@ public class Concesionarios extends AppCompatActivity {
                 new EmpresaEnSegundoPlano().execute("");
                 break;
             case 1:
-                Intent i = new Intent(Concesionarios.this, Solicitudes.class);
+                Intent i = new Intent(this, Solicitudes.class);
                 startActivity(i);
                 break;
             case 2:
-                    //Link hacia el activity
+                    Intent in = new Intent(this, Empresas.class);
+                startActivity(in);
                 break;
         }
         return super.onOptionsItemSelected(item);
